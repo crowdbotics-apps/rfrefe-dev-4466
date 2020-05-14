@@ -46,3 +46,33 @@ class R123(models.Model):
 class RFFFFF(models.Model):
     "Generated Model"
     rffff = models.BigIntegerField()
+
+
+class RVBB(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class RVVVV(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class RFFFF(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class VGGGG(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class VVVVV(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class RFFFFFdd(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()

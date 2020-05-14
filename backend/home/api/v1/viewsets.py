@@ -5,7 +5,13 @@ from .serializers import (
     HomePageSerializer,
     R123Serializer,
     R456Serializer,
+    RFFFFSerializer,
     RFFFFFSerializer,
+    RFFFFFddSerializer,
+    RVBBSerializer,
+    RVVVVSerializer,
+    VGGGGSerializer,
+    VVVVVSerializer,
 )
 from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
@@ -20,7 +26,19 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomText, HomePage, R123, R456, RFFFFF
+from home.models import (
+    CustomText,
+    HomePage,
+    R123,
+    R456,
+    RFFFF,
+    RFFFFF,
+    RFFFFFdd,
+    RVBB,
+    RVVVV,
+    VGGGG,
+    VVVVV,
+)
 
 
 class SignupViewSet(ModelViewSet):
@@ -85,3 +103,57 @@ class RFFFFFViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = RFFFFF.objects.all()
+
+
+class RVBBViewSet(viewsets.ModelViewSet):
+    serializer_class = RVBBSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = RVBB.objects.all()
+
+
+class RVVVVViewSet(viewsets.ModelViewSet):
+    serializer_class = RVVVVSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = RVVVV.objects.all()
+
+
+class RFFFFViewSet(viewsets.ModelViewSet):
+    serializer_class = RFFFFSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = RFFFF.objects.all()
+
+
+class VGGGGViewSet(viewsets.ModelViewSet):
+    serializer_class = VGGGGSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = VGGGG.objects.all()
+
+
+class VVVVVViewSet(viewsets.ModelViewSet):
+    serializer_class = VVVVVSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = VVVVV.objects.all()
+
+
+class RFFFFFddViewSet(viewsets.ModelViewSet):
+    serializer_class = RFFFFFddSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = RFFFFFdd.objects.all()
